@@ -1,0 +1,11 @@
+digraph weekday {
+	rankdir=LR;
+    graph [fontname = "DIN"];
+    node  [fontname = "DIN"];
+    edge  [fontname = "DIN"];
+	node [shape = doublecircle]; qf;
+	node [shape = circle];
+
+	q0 -> qf [ label = "WeekdayAbbr" ];
+	q0 -> qf [ label = "WeekdayFull" ];
+}

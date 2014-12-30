@@ -1,0 +1,13 @@
+digraph year {
+	rankdir=LR;
+    graph [fontname = "DIN"];
+    node  [fontname = "DIN"];
+    edge  [fontname = "DIN"];
+	node [shape = doublecircle]; q2 qf;
+	node [shape = circle];
+
+	q0 -> q1 [ label = "0-9" ];
+	q1 -> q2 [ label = "0-9" ];
+	q2 -> q3 [ label = "0-9" ];
+	q3 -> qf [ label = "0-9" ];
+}

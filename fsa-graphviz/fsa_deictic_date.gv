@@ -1,0 +1,23 @@
+digraph finite_state_machine {
+	rankdir=LR;
+    graph [fontname = "DIN"];
+    node  [fontname = "DIN"];
+    edge  [fontname = "DIN"];
+	node [shape = doublecircle]; q6 q8;
+	node [shape = circle];
+	q0 -> q1 [ label = "ε", style="dashed" ];
+	q0 -> q6 [ label = "ε", style="dashed" ];
+	q1 -> q2 [ label = "Determiner" ];
+	q1 -> q3 [ label = "Number" ];
+	q1 -> q4 [ label = "Unit" ];
+	q2 -> q4 [ label = "Unit" ];
+	q3 -> q4 [ label = "Unit" ];
+	q4 -> q5 [ label = "Preposition" ];
+	q5 -> q6 [ label = "ε", style="dashed" ];
+	q5 -> q0 [ label = "ε", style="dashed" ];
+	q6 -> q7 [ label = "DateRelation" ];
+	q7 -> q8 [ label = "Date" ];
+	q6 -> q8 [ label = "DateRelation" ];
+	q6 -> q8 [ label = "Date" ];
+	q6 -> q8 [ label = "DateAlias" ];
+}

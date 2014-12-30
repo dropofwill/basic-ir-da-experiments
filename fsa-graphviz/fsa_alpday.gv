@@ -1,0 +1,17 @@
+digraph alpday {
+	rankdir=LR;
+    graph [fontname = "DIN"];
+    node  [fontname = "DIN"];
+    edge  [fontname = "DIN"];
+	node [shape = doublecircle]; qf;
+	node [shape = circle];
+
+	q0 -> qf [ label = "SingleAlpha" ];
+	q0 -> qf [ label = "TeenAlpha" ];
+	q0 -> qf [ label = "'twentieth'" ];
+	q0 -> qf [ label = "'thirtieth'" ];
+	q0 -> q1 [ label = "'twenty'" ];
+	q0 -> q2 [ label = "'thirty'" ];
+	q1 -> qf [ label = "SingleAlpha" ];
+	q2 -> qf [ label = "'first'" ];
+}

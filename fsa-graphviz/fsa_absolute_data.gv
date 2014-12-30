@@ -1,0 +1,29 @@
+digraph finite_state_machine {
+	rankdir=LR;
+    graph [fontname = "DIN"];
+    node  [fontname = "DIN"];
+    edge  [fontname = "DIN"];
+	node [shape = doublecircle]; q6 qf;
+	node [shape = circle];
+
+	q0 -> q1 [ label = "Weekday" ];
+	q0 -> q2 [ label = "Month" ];
+	q0 -> q3 [ label = "IntDay" ];
+	q0 -> q4 [ label = "(OrdDay | AlpDay)" ];
+	q0 -> q5 [ label = "'the'" ];
+	q1 -> q2 [ label = "Month" ];
+	q1 -> q3 [ label = "IntDay" ];
+	q2 -> q6 [ label = "Day" ];
+	q3 -> q6 [ label = "Month" ];
+	q4 -> q6 [ label = "Month" ];
+	q4 -> q7 [ label = "'of'" ];
+	q5 -> q4 [ label = "(OrdDay | AlpDay)" ];
+	q7 -> q6 [ label = "Month" ];
+	q6 -> qf [ label = "Year" ];
+	q6 -> qf [ label = "Holiday" ];
+	q6 -> q8 [ label = "Year" ];
+	q6 -> q9 [ label = "Holiday" ];
+	q8 -> qf [ label = "Holiday" ];
+	q9 -> qf [ label = "Year" ];
+	q0 -> qf [ label = "(Weekday | Holiday | Month | Year)" ]
+}

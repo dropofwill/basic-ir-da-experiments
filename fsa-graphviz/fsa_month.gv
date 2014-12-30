@@ -1,0 +1,12 @@
+digraph month {
+	rankdir=LR;
+    graph [fontname = "DIN"];
+    node  [fontname = "DIN"];
+    edge  [fontname = "DIN"];
+	node [shape = doublecircle]; qf;
+	node [shape = circle];
+
+	q0 -> qf [ label = "MonthAbbr" ];
+	q0 -> qf [ label = "MonthFull" ];
+	q0 -> qf [ label = "0-12" ];
+}
